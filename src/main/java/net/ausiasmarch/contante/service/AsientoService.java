@@ -155,6 +155,9 @@ public class AsientoService implements ServiceInterface<AsientoEntity> {
 
     @Override
     public AsientoEntity create(AsientoEntity oAsientoEntity) {
+        oAsientoEntity.setTipoasiento(oTipoasientoService.get(oAsientoEntity.getTipoasiento().getId()));
+        oAsientoEntity.setUsuario(oUsuarioService.get(oAsientoEntity.getUsuario().getId()));
+        oAsientoEntity.setPeriodo(oPeriodoService.get(oAsientoEntity.getPeriodo().getId()));
         return oAsientoRepository.save(oAsientoEntity);
 
     }

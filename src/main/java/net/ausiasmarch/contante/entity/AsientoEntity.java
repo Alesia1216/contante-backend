@@ -61,6 +61,7 @@ public class AsientoEntity {
     private java.util.List<ApunteEntity> apuntes;
 
     public AsientoEntity() {
+        this.apuntes = new java.util.ArrayList<>();
     }
 
     public AsientoEntity(String descripcion, String comentarios, int inventariable,
